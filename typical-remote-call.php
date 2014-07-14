@@ -41,7 +41,7 @@ if ( !class_exists('My_Fancy_Remote_Call') )
         }
 
 
-        public function get_data()
+        public function get_api_data()
             {
             $in_cache = get_site_transient( '_wordpress_org_stats' ); 
 
@@ -63,8 +63,8 @@ if ( !class_exists('My_Fancy_Remote_Call') )
 
         public function init()
             {
-                add_action( 'wp_ajax_nopriv_ get_data', array( $this, 'get_data') );  // do not forget to add some nonce if you rely on user inputs
-                add_action( 'wp_ajax_get_data', array( $this, 'get_data') );
+                add_action( 'wp_ajax_nopriv_get_api_data', array( $this, 'get_api_data' ) );  // do not forget to add some nonce if you rely on user inputs
+                add_action( 'wp_ajax_get_api_data', array( $this, 'get_api_data' ) );
             }
 
         }
