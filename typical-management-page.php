@@ -78,6 +78,5 @@ if( !class_exists('My_Fancy') ) {
 
 }
 
-//INSTANCIATE
 $My_Fancy = My_Fancy::GetInstance();
 $My_Fancy->init();
