@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: My Fancy
+Plugin Name: My Fancy Tool Page
 Description: Do fancy stuffs in tools.php
 Version: 1.0
 Author: Julien Maury
@@ -23,9 +23,9 @@ Author URI: http://tweetpressfr.github.io
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-if( !class_exists('My_Fancy') ) {
+if( !class_exists('My_Fancy_Tool_Page') ) {
 
-    class My_Fancy{
+    class My_Fancy_Tool_Page{
 
         var $textdomain = 'your-textdomain';
         private $my_fancy_screen_name;
@@ -55,8 +55,8 @@ if( !class_exists('My_Fancy') ) {
 
         $this->my_fancy_screen_name = 
             add_management_page( 
-                    __('My Fancy', $this->textdomain),
-                    __('My Fancy', $this->textdomain), 
+                    __('My Fancy Tool', $this->textdomain),
+                    __('My Fancy Tool', $this->textdomain), 
                     'manage_options', 
                     __FILE__, 
                     array($this, 'admin_page')
@@ -78,5 +78,5 @@ if( !class_exists('My_Fancy') ) {
 
 }
 
-$My_Fancy = My_Fancy::GetInstance();
-$My_Fancy->init();
+$My_Fancy_Tool_Page = My_Fancy_Tool_Page::GetInstance();
+$My_Fancy_Tool_Page->init();
