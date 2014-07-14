@@ -28,6 +28,7 @@ if ( !class_exists('My_Fancy_Remote_Call') )
     class My_Fancy_Remote_Call
         {
         private static $instance;
+        
 
         static function GetInstance()
         {
@@ -60,6 +61,7 @@ if ( !class_exists('My_Fancy_Remote_Call') )
 
             wp_send_json_success( $response );// AJAX process
             }
+
 
         public function init()
             {
