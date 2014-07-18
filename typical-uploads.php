@@ -92,7 +92,7 @@ if( !class_exists('My_Fancy_Uploads_Tricks') )
                 add_filter('parse_query', array( $this, 'read_only_owned_files') );
                 add_filter('upload_mimes', array( $this, 'fancy_upload_mimes') );
 
-                //following hookw can be tricky, this is not "attachment" even if the post type name is attachment
+                //following hooks can be tricky, this is not "attachment" even if the post type name is attachment
                 add_filter( 'manage_media_columns', array( $this, 'add_attachments_column' ) );
                 add_action( 'manage_media_custom_column' , array( $this, 'add_attachments_column_content' ), 10, 2 );
             }
