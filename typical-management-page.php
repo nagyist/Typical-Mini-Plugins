@@ -58,7 +58,7 @@ if( !class_exists('My_Fancy_Tool_Page') ) {
                     __('My Fancy Tool', $this->textdomain),
                     __('My Fancy Tool', $this->textdomain), 
                     'manage_options', 
-                    __FILE__, 
+                   strtolower( __CLASS__ ), 
                     array($this, 'admin_page')
             );
 
